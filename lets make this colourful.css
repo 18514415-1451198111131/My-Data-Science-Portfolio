@@ -1,0 +1,180 @@
+/* General styles */
+.visuals {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20vh;
+}
+h1{
+    font-size: 2.5em;
+    color: #fff;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 20px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: rgba(238, 235, 235, 0.993);
+    overflow-x: hidden;
+}
+
+/* Animated Background */
+.background-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url('GXB.gif') no-repeat center center/cover;
+    filter: blur(5px);
+    z-index: -1;
+    animation: backgroundMove 20s infinite alternate ease-in-out;
+}
+
+@keyframes backgroundMove {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+/* Contact Icons */
+.contact-details p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-details i {
+    font-size: 1.5em;
+    color: #cac6c6;
+}
+
+/* Smooth Menu Transition */
+#menu {
+    display: none; /* Hidden by default */
+    /* background-color: #fff; */ /* Removed white background */
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    transform: translate(0, 0); /* Removes vertical offset */
+    position: absolute;
+    z-index: 1000;
+    top: 0; /* Positions the menu at the top */
+    left: 0; /* Aligns the menu to the left edge */
+    display: flex; /* Makes the menu items sit horizontally */
+    flex-direction: row; /* Ensures horizontal layout */
+    justify-content: center; /* Centers the menu items */
+    gap: 15px; /* Adds spacing between menu items */
+}
+
+/* Active dropdown menu styling */
+#menu.active {
+    display: block;
+    opacity: 1;
+    transform: translate(-50%, 0); /* Drops the menu down */
+    top: 0; /* Ensures it stays at the top */
+    left: 0; /* Ensures alignment with the top-left corner */
+}
+
+/* Optional: Hover effect on menu items */
+#menu a {
+    display: block;
+    padding: 8px 12px;
+    color: inherit;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+#menu a:hover {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+/* Navigation Styles */
+nav ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1a1a1a;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 1rem 0;
+    position: fixed;
+    top: o;
+    width: 100%;
+    z-index: 1000; /* Ensures it stays on top */
+    color: #333; /* Default color */
+    padding: 10px;
+    display: block;
+    transition: color 0.3s, background-color 0.3s; /* Smooth transition */
+}
+
+/* Hover effect */
+nav ul li a:hover {
+    color: #fff; /* Text color on hover */
+    background-color: #007BFF; /* Background color on hover */
+}
+
+/* Active state styling */
+nav ul li a.active {
+    color: #fff; /* Text color for active link */
+    background-color: #0056b3; /* Background color for active link */
+}
+
+/* Menu Icon Styles */
+.menu-icon {
+    cursor: pointer;
+    font-size: 2em;
+    transition: transform 0.3s;
+    display: block; /* Ensures it's treated as a block element */
+    margin: 20px auto; /* Centers it horizontally and adds spacing below the header */
+    text-align: center; /* Aligns the icon in the center */
+}
+
+.menu-icon:hover {
+    transform: scale(1.2); /* Enlarges the icon slightly on hover */
+    color: #007BFF; /* Changes color on hover */
+}
+.profile-image {
+    width: 180px; /* Updated width */
+    height: 120px; /* Updated height */
+    border-radius: 50%; /* Keeps the image circular/oval */
+    object-fit: cover; /* Ensures the image fits within the dimensions */
+    transition: transform 0.5s ease-in-out; /* Updated transition duration */
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px; /* Adjusted width for better appearance */
+    gap: 15px; /* Increased gap for better spacing */
+    margin: 20px auto; /* Centers the form horizontally */
+    padding: 20px; /* Adds padding inside the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+.contact-container {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    position: absolute; /* Positions the image relative to the nearest positioned ancestor */
+    top: 0; /* Aligns the image to the top */
+    right: 0; /* Aligns the image to the right */
+    margin: 10px; /* Optional: Adds some spacing from the edges */
+}
+
+section {
+    padding: 50px 20px; /* Adds spacing around each section */
+    margin: 20px auto; /* Centers the section and adds vertical spacing */
+    max-width: 800px; /* Limits the width for better readability */
+    text-align: center; /* Centers the content within the section */
+    /* background-color: #f9f9f9; */ /* Removed white background */
+    border-radius: 8px; /* Optional: Rounds the corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
